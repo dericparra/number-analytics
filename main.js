@@ -1,13 +1,13 @@
 let numeros = []
 let res = document.querySelector('div#res')
-console.log(numeros)
+
 function adicionar() {
     let newN = document.querySelector('input#number')
     let select = document.querySelector('select#numeros')
     let number = Number(newN.value)
     res.innerHTML = ''
 
-    if ( number < 1 || number > 100) {
+    if (number < 1 || number > 100) {
         window.alert('Favor informar um numero de 1 a 100')
     } else {
         let item = document.createElement('option')
@@ -16,14 +16,10 @@ function adicionar() {
         numeros.push(number)
         
     }
-    console.log(number)
 }
 
 function analisar() {
-
-
     numeros.sort
-
 
     let total = document.createElement('p')
     let maior = document.createElement('p')
@@ -43,5 +39,4 @@ function analisar() {
     res.appendChild(menor)
     res.appendChild(somados)
     res.appendChild(media)
-
 }
